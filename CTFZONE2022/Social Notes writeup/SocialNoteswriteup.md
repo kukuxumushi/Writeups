@@ -5,16 +5,16 @@ Description:
 
 That's what we see when we opened the link:
 
-![image](images/image3.png)
+<img src="images/image3.png" width="600">
 
 Register and sign-in pages have similar functionality:
 
-![image](images/image8.png)
+<img src="images/image8.png" width="600">
 
 Lets try to register.
 On the main page we can see simple web site, where we can create and share notes.
 
-![image](images/image13.png)
+<img src="images/image13.png" width="600">
 
 What could go wrong with such an ordinary service?
 
@@ -22,21 +22,21 @@ Fortunately, we have access to the source code of the application, from which we
 
 If we look at the code responsible for displaying the notes page, we will see that everything is safe here, and we will not be able to bypass the checks.
 
-![image](images/image2.png)
+<img src="images/image2.png" width="800">
 
 But luckily for us, the developer decided only to check the username itself when sharing notes.
 
-![image](images/image10.png)
+<img src="images/image10.png" width="800">
 
 Now we just need to figure out how to register a user with the same name as the target user.
 
 If we look at the source code of the registration function, we see that we will not be able to register the same username through the sign-up form.
 
-![image](images/image11.png)
+<img src="images/image11.png" width="800">
 
 But when we look at the oAuth flow, we can see there is nothing that stops us from registering with the existing username.
 
-![image](images/image6.png)
+<img src="images/image6.png" width="800">
 
 To sum up, in order to get the flag we need to do the following:
 
@@ -50,23 +50,23 @@ The process of “hacking”:
 
 1) We already did this step while exploring the application.
 2) To create an account with a popular username I chose discord because I was sure that I can create a nonunique name there. 
-![image](images/image5.png)
+<img src="images/image5.png" width="300">
 3) We perform the necessary steps to register via oAuth provider.
-![image](images/image1.png)
+<img src="images/image1.png" width="300">
 
 Aaaaaaand we are in!
 
-![image](images/image7.png)
+<img src="images/image7.png" width="700">
 
 But as we saw in the code we cannot just read his notes
 
-![image](images/image12.png)
+<img src="images/image12.png" width="700">
 
 4) After getting “username=ctfzone_admin” in our session object, we can share his private notes to our normal account.
-![image](images/image9.png)
+<img src="images/image9.png" width="600">
 
 5) And then, when we log in to our normal user account we can see shared notes from cfzone_admin.
-![image](images/image4.png)
+<img src="images/image4.png" width="600">
 
 
 Conclusions:
