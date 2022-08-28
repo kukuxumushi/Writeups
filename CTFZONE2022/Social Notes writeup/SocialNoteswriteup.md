@@ -53,10 +53,13 @@ The process of “hacking”:
 ![image](images/image5.png)
 3) We perform the necessary steps to register via oAuth provider.
 ![image](images/image1.png)
+
 Aaaaaaand we are in!
+
 ![image](images/image7.png)
 
 But as we saw in the code we cannot just read his notes
+
 ![image](images/image12.png)
 
 4) After getting “username=ctfzone_admin” in our session object, we can share his private notes to our normal account.
